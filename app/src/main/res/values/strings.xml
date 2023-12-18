@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Fablo CMS</string>
+    <string name="str_email">Email</string>
+    <string name="str_password">Password</string>
+    <string name="str_login">Login</string>
+    <string name="str_app_name_jm">JobMagnet</string>
+    <string name="str_sign_up">Sign Up</string>
+    <string name="str_confirm_password">Confirm Password</string>
+    <string name="str_first_name">First Name</string>
+    <string name="str_last_name">Last Name</string>
+    <string name="str_continue">Continue</string>
+    <string name="str_welcome_to_jobmagnet">Welcome to JobMagnet</string>
+    <string name="str_app_description"><![CDATA[An AI based job recommendation engine for employees & employers]]></string>
+    <string name="str_sign_up_small">Sign up</string>
+    <string name="str_login_type">Login Type</string>
+    <string name="str_cms_control_center">CMS Control Center</string>
+</resources>
