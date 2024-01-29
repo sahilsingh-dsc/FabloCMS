@@ -120,5 +120,7 @@ public class Constant {
     public static final String STORAGE_IMAGE_CATEGORY = "marketplace/category";
     public static final String STORAGE_IMAGE_PRODUCT = "marketplace/product";
     public static final String STORAGE_IMAGE_OUTLET_BANNER = "marketplace/outlet/banner";
+    public static final String COLLECTION_SELLER = "sellers";
+    public static final String COLLECTION_ONBOARD = "onboard";
 
 }

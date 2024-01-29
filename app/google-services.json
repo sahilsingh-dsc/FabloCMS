@@ -1,0 +1,200 @@
+{
+  "project_info": {
+    "project_number": "1005985944740",
+    "project_id": "marketplace-56244",
+    "storage_bucket": "marketplace-56244.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1005985944740:android:8cefd960dd993135884231",
+        "android_client_info": {
+          "package_name": "com.myfablo.cms"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1005985944740-b1kn8i8bdkfv0nq1946255uh7fjmd4tm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCv1p2M5PKQqXKrJgJ36fgm1gXqapsocGU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1005985944740-b1kn8i8bdkfv0nq1946255uh7fjmd4tm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1005985944740:android:c142c1b6d6795655884231",
+        "android_client_info": {
+          "package_name": "com.myfablo.customer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1005985944740-37vjlqkut9thmobf6f3uvtpink5sd808.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.myfablo.customer",
+            "certificate_hash": "845bcb58ad3c937f21b76764bb920964e3523999"
+          }
+        },
+        {
+          "client_id": "1005985944740-b1kn8i8bdkfv0nq1946255uh7fjmd4tm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCv1p2M5PKQqXKrJgJ36fgm1gXqapsocGU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1005985944740-b1kn8i8bdkfv0nq1946255uh7fjmd4tm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1005985944740:android:1cb2deee1e9a2353884231",
+        "android_client_info": {
+          "package_name": "com.myfablo.dm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1005985944740-b1kn8i8bdkfv0nq1946255uh7fjmd4tm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCv1p2M5PKQqXKrJgJ36fgm1gXqapsocGU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1005985944740-b1kn8i8bdkfv0nq1946255uh7fjmd4tm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1005985944740:android:c94aad7c3cf2b2ba884231",
+        "android_client_info": {
+          "package_name": "com.myfablo.dp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1005985944740-b1kn8i8bdkfv0nq1946255uh7fjmd4tm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCv1p2M5PKQqXKrJgJ36fgm1gXqapsocGU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1005985944740-b1kn8i8bdkfv0nq1946255uh7fjmd4tm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1005985944740:android:41f8b11ca8064463884231",
+        "android_client_info": {
+          "package_name": "com.myfablo.seller"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1005985944740-f7h5d0f16k930p7vlo1343a9hlafb3p1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.myfablo.seller",
+            "certificate_hash": "2358b4c904d90877db6b3ae2199bce195314d9f2"
+          }
+        },
+        {
+          "client_id": "1005985944740-b1kn8i8bdkfv0nq1946255uh7fjmd4tm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCv1p2M5PKQqXKrJgJ36fgm1gXqapsocGU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1005985944740-b1kn8i8bdkfv0nq1946255uh7fjmd4tm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1005985944740:android:e854734c7b16168d884231",
+        "android_client_info": {
+          "package_name": "com.myfablo.support"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1005985944740-b1kn8i8bdkfv0nq1946255uh7fjmd4tm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCv1p2M5PKQqXKrJgJ36fgm1gXqapsocGU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1005985944740-b1kn8i8bdkfv0nq1946255uh7fjmd4tm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,5 +1,6 @@
 plugins {
     id 'com.android.application'
+    id 'com.google.gms.google-services'
 }
 
 android {
@@ -60,6 +61,7 @@ dependencies {
 
     // glide image caching
     implementation 'com.github.bumptech.glide:glide:4.13.2'
+    implementation 'com.google.firebase:firebase-firestore:24.10.1'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.13.2'
 
     // one signal
@@ -75,6 +77,12 @@ dependencies {
     implementation 'com.guolindev.permissionx:permissionx:1.7.1'
 
     implementation 'io.github.chochanaresh:filepicker:0.2.3'
+
+    // custom switch
+    implementation 'com.github.zcweng:switch-button:0.0.3@aar'
+
+    // apache lang
+    implementation 'org.apache.commons:commons-text:1.6'
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'

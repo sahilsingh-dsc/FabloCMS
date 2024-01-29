@@ -2,6 +2,8 @@ package com.myfablo.cms.module_outlet;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+import androidx.core.view.ViewCompat;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,6 +13,7 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
+import android.view.WindowInsets;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -69,14 +72,30 @@ public class OutletDetailsActivity extends AppCompatActivity implements View.OnC
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityOutletDetailsBinding.inflate(getLayoutInflater());
+        setTransparentStatusBar();
         View view = binding.getRoot();
         setContentView(view);
         context = OutletDetailsActivity.this;
         initView();
     }
 
+    private void setTransparentStatusBar() {
+        View decorView = getWindow().getDecorView();
+        decorView.setOnApplyWindowInsetsListener((v, insets) -> {
+            WindowInsets defaultInsets = v.onApplyWindowInsets(insets);
+            return defaultInsets.replaceSystemWindowInsets(
+                    defaultInsets.getSystemWindowInsetLeft(),
+                    0,
+                    defaultInsets.getSystemWindowInsetRight(),
+                    defaultInsets.getSystemWindowInsetBottom());
+        });
+        ViewCompat.requestApplyInsets(decorView);
+        getWindow().setStatusBarColor(ContextCompat.getColor(this, android.R.color.transparent));
+    }
+
+
     private void initView() {
-        binding.btnUploadMenu.setOnClickListener(this);
+//        binding.btnUploadMenu.setOnClickListener(this);
 
         String outletStringJson = getIntent().getStringExtra("outlet");
         Gson gson = new Gson();
@@ -333,8 +352,8 @@ public class OutletDetailsActivity extends AppCompatActivity implements View.OnC
 
     @Override
     public void onClick(View view) {
-        if (view == binding.btnUploadMenu) {
-            selectFile();
-        }
+//        if (view == binding.btnUploadMenu) {
+//            selectFile();
+//        }
     }
 }

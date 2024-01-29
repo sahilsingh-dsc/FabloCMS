@@ -20,6 +20,8 @@ public class RestClient {
     private static Retrofit retrofitFabloOrderService;
     private static Retrofit retrofitFabloAdminService;
     private static Retrofit retrofitFabloMenuTool;
+    private static Retrofit retrofitDigiKycService;
+    private static final String FABLO_DIGIKYC_SERVICE_BASE_URL = "https://digikyc.fablocdn.com/v1/";
 
     public static Retrofit getRetrofitFabloUserService(Context context) {
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
@@ -152,6 +154,26 @@ public class RestClient {
                     .build();
         }
         return retrofitFabloMenuTool;
+    }
+
+    public static Retrofit getRetrofitDigiKycService(Context context) {
+        HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
+        interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
+
+        OkHttpClient httpClient = new OkHttpClient.Builder()
+                .addInterceptor(interceptor)
+                .connectTimeout(10, TimeUnit.SECONDS)
+                .readTimeout(10, TimeUnit.SECONDS).build();
+
+        if (retrofitDigiKycService == null) {
+            retrofitDigiKycService = new Retrofit.Builder()
+                    .baseUrl(FABLO_DIGIKYC_SERVICE_BASE_URL)
+                    .addConverterFactory(ScalarsConverterFactory.create())
+                    .addConverterFactory(GsonConverterFactory.create())
+                    .client(httpClient)
+                    .build();
+        }
+        return retrofitDigiKycService;
     }
 
 }

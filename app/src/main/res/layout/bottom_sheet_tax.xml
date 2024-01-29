@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Verify GSTIN"
+        android:fontFamily="@font/manrope_bold"
+        android:textColor="@color/color_text_title"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:id="@+id/lvCheckGst"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:orientation="vertical">
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/checkBoxGst"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="Non GST Individual/Business"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tiGst"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:boxCornerRadiusBottomStart="0dp"
+            app:boxCornerRadiusBottomEnd="0dp"
+            app:boxCornerRadiusTopEnd="0dp"
+            app:boxCornerRadiusTopStart="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:counterMaxLength="15"
+            app:counterEnabled="true"
+            android:hint="EX. 23AXHM6385P6Z2">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etGst"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLength="15"
+                android:fontFamily="@font/google_sans_medium"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tiGstCategory"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            android:hint="GST Category"
+            android:focusable="false"
+            app:boxCornerRadiusTopStart="0dp"
+            app:boxCornerRadiusTopEnd="0dp"
+            app:boxCornerRadiusBottomStart="0dp"
+            app:boxCornerRadiusBottomEnd="0dp">
+
+            <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                android:id="@+id/atvGstCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/redhat_medium"
+                android:focusable="false"
+                android:inputType="text"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnVerifyGst"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@color/color_primary"
+            android:fontFamily="@font/redhat_medium"
+            android:text="Continue"
+            android:textSize="16sp"
+            app:cornerRadius="0dp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lvPanResponse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_fab_kyc_state_complete"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:fontFamily="@font/google_sans_bold"
+            android:textColor="@color/color_text_title"
+            android:textSize="18sp"
+            android:text="Verification Successful"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="24dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textColor="@color/color_text_description"
+                android:textSize="16sp"
+                android:fontFamily="@font/google_sans_regular"/>
+
+            <TextView
+                android:id="@+id/tvNameOnPan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="..."
+                android:textColor="@color/color_text_title"
+                android:textSize="18sp"
+                android:fontFamily="@font/google_sans_medium"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/line_dashed"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Category"
+                android:textColor="@color/color_text_description"
+                android:textSize="16sp"
+                android:fontFamily="@font/google_sans_regular"/>
+
+            <TextView
+                android:id="@+id/tvTypeOfPan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="..."
+                android:textColor="@color/color_text_title"
+                android:textSize="18sp"
+                android:fontFamily="@font/google_sans_medium"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/line_dashed"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Aadhaar Link Status"
+                android:textColor="@color/color_text_description"
+                android:textSize="16sp"
+                android:fontFamily="@font/google_sans_regular"/>
+
+            <TextView
+                android:id="@+id/tvAadhaarPanLink"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="..."
+                android:textColor="@color/color_text_title"
+                android:textSize="18sp"
+                android:fontFamily="@font/google_sans_medium"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/line_dashed"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Status"
+                android:textColor="@color/color_text_description"
+                android:textSize="16sp"
+                android:fontFamily="@font/google_sans_regular"/>
+
+            <TextView
+                android:id="@+id/tvStatusOfPan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="..."
+                android:textColor="@color/color_text_title"
+                android:textSize="18sp"
+                android:fontFamily="@font/google_sans_medium"/>
+
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnUpdatePan"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="24dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@color/color_primary"
+            android:fontFamily="@font/redhat_medium"
+            android:text="Update PAN"
+            android:textSize="16sp"
+            app:cornerRadius="0dp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

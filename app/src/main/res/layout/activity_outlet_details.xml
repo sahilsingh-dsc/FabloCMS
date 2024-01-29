@@ -7,10 +7,19 @@
     android:orientation="vertical"
     tools:context=".module_outlet.OutletDetailsActivity">
 
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_fablo_go_back"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp"
+        android:padding="8dp"/>
+
     <LinearLayout
+        android:id="@+id/ivGoBack"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
         android:layout_marginBottom="24dp"
         android:gravity="center"
         android:orientation="horizontal">
@@ -19,10 +28,10 @@
             android:id="@+id/ivOutletImage"
             android:layout_width="56dp"
             android:layout_height="56dp"
+            android:layout_gravity="top"
             android:layout_marginStart="16dp"
             android:background="@drawable/ring_outlet_online"
             android:padding="4dp"
-            android:layout_gravity="top"
             android:scaleType="centerCrop"
             android:src="@drawable/store_icon" />
 
@@ -38,65 +47,70 @@
                 android:id="@+id/tvOutletName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="99 Rotiwala"
-                android:maxLines="1"
                 android:fontFamily="@font/google_sans_medium"
-                android:textSize="18sp"
-                android:textColor="@color/color_text_title"/>
+                android:maxLines="1"
+                android:text="99 Rotiwala"
+                android:textColor="@color/color_text_title"
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/tvOutletArea"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="LIG Square"
                 android:fontFamily="@font/google_sans_regular"
-                android:textSize="14sp"
-                android:textColor="@color/color_text_description"/>
+                android:text="LIG Square"
+                android:textColor="@color/color_text_description"
+                android:textSize="14sp" />
 
 
         </LinearLayout>
 
     </LinearLayout>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:background="@drawable/line_dashed"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:paddingTop="8dp"
-        android:paddingBottom="8dp"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
-        <TextView
-            android:layout_width="0dp"
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_separator_light"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginStart="16dp"
-            android:text="Upload Swiggy Menu"
-            android:fontFamily="@font/google_sans_medium"
-            android:textSize="16sp"/>
+            android:gravity="center"
+            android:orientation="horizontal">
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnUploadMenu"
-            android:layout_width="wrap_content"
-            android:layout_height="46dp"
-            android:text="Upload"
-            android:textSize="16sp"
-            app:cornerRadius="0dp"
-            android:backgroundTint="@color/color_primary"
-            android:fontFamily="@font/redhat_medium"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="Outlet Details"
+                android:fontFamily="@font/google_sans_medium"
+                android:textColor="@color/color_text_title"
+                android:textSize="16sp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/ic_selection_arrow"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_separator_light"/>
 
     </LinearLayout>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:background="@drawable/line_dashed"/>
 
 </LinearLayout>

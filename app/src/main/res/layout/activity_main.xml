@@ -7,44 +7,204 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="64dp"
-        android:layout_marginBottom="8dp"
-        android:text="Outlets"
-        android:textColor="@color/color_text_title"
-        android:textSize="20sp"
-        android:fontFamily="@font/redhat_bold"/>
+        app:cardCornerRadius="0dp"
+        app:cardElevation="8dp">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tiSearchOutlet"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="16dp"
-        android:hint="Search by outlet"
-        app:boxCornerRadiusTopStart="0dp"
-        app:boxCornerRadiusTopEnd="0dp"
-        app:boxCornerRadiusBottomStart="0dp"
-        app:boxCornerRadiusBottomEnd="0dp">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etSearchOutlet"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/redhat_medium"
-            android:inputType="textEmailAddress"/>
+            android:orientation="horizontal">
 
-    </com.google.android.material.textfield.TextInputLayout>
+            <TextView
+                android:id="@+id/tvPartnerName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="42dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/google_sans_medium"
+                android:text="Fablo CMS"
+                android:textColor="@color/color_text_title"
+                android:textSize="18sp" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerOutlets"
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <LinearLayout
+        android:id="@+id/lvOrders"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="16dp"
+                android:text="Orders"
+                android:textSize="18sp"
+                android:textColor="@color/color_text_sub_title"
+                android:fontFamily="@font/manrope_semi_bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:text="..."
+                android:textSize="18sp"
+                android:textColor="@color/color_text_title"
+                android:fontFamily="@font/manrope_semi_bold"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/line_dashed"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lvOutlets"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="16dp"
+                android:text="Outlets"
+                android:textSize="18sp"
+                android:textColor="@color/color_text_sub_title"
+                android:fontFamily="@font/manrope_semi_bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:text="..."
+                android:textSize="18sp"
+                android:textColor="@color/color_text_title"
+                android:fontFamily="@font/manrope_semi_bold"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/line_dashed"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="16dp"
+                android:text="Delivery Partners"
+                android:textSize="18sp"
+                android:textColor="@color/color_text_sub_title"
+                android:fontFamily="@font/manrope_semi_bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:text="..."
+                android:textSize="18sp"
+                android:textColor="@color/color_text_title"
+                android:fontFamily="@font/manrope_semi_bold"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/line_dashed"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lvTickets"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="16dp"
+                android:text="Tickets"
+                android:textSize="18sp"
+                android:textColor="@color/color_text_sub_title"
+                android:fontFamily="@font/manrope_semi_bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:text="..."
+                android:textSize="18sp"
+                android:textColor="@color/color_text_title"
+                android:fontFamily="@font/manrope_semi_bold"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/line_dashed"/>
+
+    </LinearLayout>
+
 
 </LinearLayout>
