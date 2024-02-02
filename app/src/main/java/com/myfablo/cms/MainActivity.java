@@ -1,5 +1,6 @@
 package com.myfablo.cms;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.core.view.ViewCompat;
@@ -15,6 +16,10 @@ import android.view.View;
 import android.view.WindowInsets;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 import com.myfablo.cms.databinding.ActivityMainBinding;
 import com.myfablo.cms.module_onboard.OnboardActivity;
 import com.myfablo.cms.module_onboard.feature_ticket.OnboardTicketBottomSheet;
@@ -73,6 +78,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void initView() {
         initService();
         initClick();
+
+        FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
+        firebaseAuth.signInAnonymously().addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+
+            }
+        });
+
     }
 
     private void initClick() {

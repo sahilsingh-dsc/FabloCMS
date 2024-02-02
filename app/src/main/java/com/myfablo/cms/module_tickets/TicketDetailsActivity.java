@@ -166,6 +166,7 @@ public class TicketDetailsActivity extends AppCompatActivity implements View.OnC
         binding.btnSellerDetails.setOnClickListener(this);
         binding.btnTaxDetails.setOnClickListener(this);
         binding.btnVerifyFssai.setOnClickListener(this);
+        binding.btnUploadDocument.setOnClickListener(this);
     }
 
     @Override
@@ -194,6 +195,9 @@ public class TicketDetailsActivity extends AppCompatActivity implements View.OnC
             VerifyFssaiBottomSheet verifyFssaiBottomSheet = new VerifyFssaiBottomSheet();
             verifyFssaiBottomSheet.setArguments(bundle);
             verifyFssaiBottomSheet.show(getSupportFragmentManager(), "fssaiDetails");
+        } else if (v == binding.btnUploadDocument) {
+            Intent intent = new Intent(context, UploadDocumentsActivity.class);
+            startActivity(intent);
         }
     }
 }

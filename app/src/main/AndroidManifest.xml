@@ -15,6 +15,9 @@
         android:theme="@style/Theme.FabloCMS"
         tools:targetApi="31">
         <activity
+            android:name=".module_tickets.UploadDocumentsActivity"
+            android:exported="false" />
+        <activity
             android:name=".module_onboard.feature_outlet.OutletMappingActivity"
             android:exported="false" />
         <activity
